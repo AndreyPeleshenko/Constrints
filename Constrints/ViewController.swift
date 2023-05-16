@@ -7,17 +7,55 @@ class ViewController: UIViewController {
     @IBOutlet var trafficLightGreenView: UIView!
     @IBOutlet var trafficLightSwitchButton: UIButton!
     
-    let colorOfLight: ColorLight = .green
+    var colorOfLight: ColorLight = .red
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trafficLightRedView.layer.cornerRadius = trafficLightRedView.frame.height / 2
-        trafficLightYellowView.layer.cornerRadius = trafficLightYellowView.frame.height / 2
-        trafficLightGreenView.layer.cornerRadius = trafficLightGreenView.frame.height / 2
+        trafficLightSwitchButton.setTitle("START", for: .normal)
+        
+        trafficLightSwitchButton = setupButton(for: trafficLightSwitchButton, title: "START")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        trafficLightRedView = setupView(for: trafficLightRedView, color: .red)
+        trafficLightYellowView = setupView(for: trafficLightYellowView, color: .yellow)
+        trafficLightGreenView = setupView(for: trafficLightGreenView, color: .green)
     }
     
     @IBAction func LightSwith(_ sender: UIButton) {
+        trafficLightSwitchButton.setTitle("NEXT", for: .normal)
         
+        switch colorOfLight {
+        case .red:
+            trafficLightRedView.alpha = 1
+            trafficLightGreenView.alpha = 0.3
+            colorOfLight = .yellow
+        case .yellow:
+            trafficLightYellowView.alpha = 1
+            trafficLightRedView.alpha = 0.3
+            colorOfLight = .green
+        case .green:
+            trafficLightGreenView.alpha = 1
+            trafficLightYellowView.alpha = 0.3
+            colorOfLight = .red
+        }
+    }
+    
+    private func setupView(for view: UIView, color: UIColor) -> UIView {
+        view.backgroundColor = color
+        view.alpha = 0.3
+        view.layer.cornerRadius = view.frame.height / 2
+        return view
+    }
+    
+    private func setupButton(for button: UIButton, title: String) -> UIButton {
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 10
+        button.setTitle("START", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 25)
+        return button
     }
 }
 

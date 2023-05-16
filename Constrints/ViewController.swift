@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     @IBOutlet var trafficLightGreenView: UIView!
     @IBOutlet var trafficLightSwitchButton: UIButton!
     
-    let colorOfLight: ColorLight = .red
+    let colorOfLight: ColorLight = .green
     
     override func viewDidLoad() {
         super.viewDidLoad()

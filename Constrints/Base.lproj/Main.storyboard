@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,44 +12,38 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Constrints" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AJl-jk-rXg">
-                                <rect key="frame" x="111" y="89" width="207" height="681"/>
+                                <rect key="frame" x="111" y="89" width="170" height="570"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-FQ-TNX">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="207"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5fh-FQ-TNX" secondAttribute="height" multiplier="1:1" id="qH8-mL-m90"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou9-GL-3FB">
-                                        <rect key="frame" x="0.0" y="237" width="207" height="207"/>
+                                        <rect key="frame" x="0.0" y="200" width="170" height="170"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ou9-GL-3FB" secondAttribute="height" multiplier="1:1" id="t1H-7R-VdM"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vt-LO-WnU">
-                                        <rect key="frame" x="0.0" y="474" width="207" height="207"/>
+                                        <rect key="frame" x="0.0" y="400" width="170" height="170"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="0Vt-LO-WnU" secondAttribute="height" multiplier="1:1" id="7vD-BX-AgZ"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXi-zw-WtY">
-                                <rect key="frame" x="100" y="828" width="230" height="40"/>
+                                <rect key="frame" x="100" y="748" width="193" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4jr-JF-5lB"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="LightSwith:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Kg-Pt-urH"/>
+                                    <action selector="lightSwith:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAL-kb-7mm"/>
                                 </connections>
                             </button>
                         </subviews>

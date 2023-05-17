@@ -11,8 +11,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trafficLightSwitchButton.setTitle("START", for: .normal)
-        
         trafficLightSwitchButton = setupButton(for: trafficLightSwitchButton, title: "START")
     }
     
@@ -23,7 +21,7 @@ class ViewController: UIViewController {
         trafficLightGreenView = setupView(for: trafficLightGreenView, color: .green)
     }
     
-    @IBAction func LightSwith(_ sender: UIButton) {
+    @IBAction func lightSwith(_ sender: UIButton) {
         trafficLightSwitchButton.setTitle("NEXT", for: .normal)
         
         switch colorOfLight {
@@ -52,7 +50,7 @@ class ViewController: UIViewController {
     private func setupButton(for button: UIButton, title: String) -> UIButton {
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 10
-        button.setTitle("START", for: .normal)
+        button.setTitle(title, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 25)
         return button
